@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# root 密码：'iam59!z$', deep 密码：'deep$1234'
+
 # The root of the build/dist directory
 DEEP_ROOT=$(dirname "${BASH_SOURCE[0]}")/../..
 
