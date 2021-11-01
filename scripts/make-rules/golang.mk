@@ -12,7 +12,8 @@ ifneq ($(DLV),)
 	GO_BUILD_FLAGS += -gcflags "all=-N -l"
 	LDFLAGS = ""
 endif
-GO_BUILD_FLAGS += -tags=jsoniter -ldflags "$(GO_LDFLAGS)"
+GO_BUILD_FLAGS += -tags=jsoniter
+# -ldflags "$(GO_LDFLAGS)"
 
 ifeq ($(GOOS),windows)
 	GO_OUT_EXT := .exe
@@ -54,4 +55,4 @@ go.build.%:
 	@CGO_ENABLED=0 GOOS=$(OS) GOARCH=$(ARCH) $(GO) build $(GO_BUILD_FLAGS) -o $(OUTPUT_DIR)/platforms/$(OS)/$(ARCH)/$(COMMAND)$(GO_OUT_EXT) $(ROOT_PACKAGE)/cmd/$(COMMAND)
 
 .PHONY: go.build
-go.build: go.build.verify $(addprefix go.build., $(addprefix $(PLATFORM)., $(BINS)))
+go.build: go.build.verify $(addprefix go.build., $(addprefix $(PLrmATFORM)., $(BINS)))

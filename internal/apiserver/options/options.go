@@ -1,7 +1,7 @@
 package options
 
 import (
-	genericoptions "github.com/RaulZuo/deep-process/internal/pkg/options"
+	genericoptions "github.com/RaulZuo/deep/internal/pkg/options"
 	cliflag "github.com/marmotedu/component-base/pkg/cli/flag"
 )
 

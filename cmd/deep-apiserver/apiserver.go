@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/RaulZuo/deep-process/internal/apiserver"
+	"github.com/RaulZuo/deep/internal/apiserver"
 	"math/rand"
 	"os"
 	"runtime"

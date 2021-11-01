@@ -1,8 +1,8 @@
 package apiserver
 
 import (
-	"github.com/RaulZuo/deep-process/internal/apiserver/config"
-	genericapiserver "github.com/RaulZuo/deep-process/internal/pkg/server"
+	"github.com/RaulZuo/deep/internal/apiserver/config"
+	genericapiserver "github.com/RaulZuo/deep/internal/pkg/server"
 )
 
 type apiServer struct {

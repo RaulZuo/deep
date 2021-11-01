@@ -1,7 +1,7 @@
 package options
 
 import (
-	"github.com/RaulZuo/deep-process/internal/pkg/server"
+	"github.com/RaulZuo/deep/internal/pkg/server"
 	"github.com/spf13/pflag"
 )
 

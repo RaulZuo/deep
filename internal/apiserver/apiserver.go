@@ -2,9 +2,9 @@
 package apiserver
 
 import (
-	"github.com/RaulZuo/deep-process/internal/apiserver/config"
-	"github.com/RaulZuo/deep-process/internal/apiserver/options"
-	"github.com/RaulZuo/deep-process/pkg/app"
+	"github.com/RaulZuo/deep/internal/apiserver/config"
+	"github.com/RaulZuo/deep/internal/apiserver/options"
+	"github.com/RaulZuo/deep/pkg/app"
 )
 
 const commandDesc = `The IAM API server validates and configures data

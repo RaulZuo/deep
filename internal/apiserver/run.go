@@ -1,7 +1,7 @@
 package apiserver
 
 import (
-	"github.com/RaulZuo/deep-process/internal/apiserver/config"
+	"github.com/RaulZuo/deep/internal/apiserver/config"
 )
 
 func Run(cfg *config.Config) error {

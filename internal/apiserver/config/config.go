@@ -1,6 +1,6 @@
 package config
 
-import "github.com/RaulZuo/deep-process/internal/apiserver/options"
+import "github.com/RaulZuo/deep/internal/apiserver/options"
 
 // Config is the running configuration structure of the DEEP_PROCESS pump service.
 type Config struct {
