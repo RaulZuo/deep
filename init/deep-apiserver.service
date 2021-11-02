@@ -1,6 +1,15 @@
 [Unit]
 Description=DEEP APIServer
+Documentation=https://github.com/RaulZuo/deep/blob/master/init/README.md
 
 [Service]
+WorkingDirectory=${DEEP_DATA_DIR}/deep-apiserver
+ExecStartPre=/usr/bin/mkdir -p ${DEEP_DATA_DIR}/deep-apiserver
+ExecStartPre=/usr/bin/mkdir -p ${DEEP_LOG_DIR}
+ExecStart=${DEEP_INSTALL_DIR}/bin/deep-apiserver --config=${DEEP_CONFIG_DIR}/deep-apiserver.yaml
+Restart=always
+RestartSec=5
+StartLimitInterval=0
 
 [Install]
+WantedBy=multi-user.target
