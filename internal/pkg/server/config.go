@@ -6,13 +6,18 @@ import "github.com/gin-gonic/gin"
 // Its members are sorted roughly in order of importance for composers.
 type Config struct {
 	//SecureServing   *SecureServingInfo
-	//InsecureServing *InsecureServingInfo
+	InsecureServing *InsecureServingInfo
 	//Jwt             *JwtInfo
 	Mode            string
 	Middlewares     []string
 	Healthz         bool
 	//EnableProfiling bool
 	//EnableMetrics   bool
+}
+
+// InsecureServingInfo holds configuration of the insecure http server.
+type InsecureServingInfo struct {
+	Address string
 }
 
 // NewConfig returns a Config struct with the default values.

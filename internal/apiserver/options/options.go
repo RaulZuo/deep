@@ -8,6 +8,8 @@ import (
 // Options runs a deep-process api server.
 type Options struct {
 	GenericServerRunOptions *genericoptions.ServerRunOptions       `json:"server"   mapstructure:"server"`
+	InsecureServing         *genericoptions.InsecureServingOptions `json:"insecure" mapstructure:"insecure"`
+
 }
 
 // NewOptions creates a new Option object with default parameters.
