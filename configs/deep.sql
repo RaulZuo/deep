@@ -12,7 +12,7 @@ USE `deep`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP TABLE IT EXISTS `insight_data`;
+DROP TABLE IF EXISTS `insight_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `insight_data` (
@@ -22,15 +22,15 @@ CREATE TABLE `insight_data` (
   `insight_id` varchar(32) NOT NULL COMMENT '洞察数据实例ID uid',
   `name` varchar(100) NOT NULL COMMENT '洞察数据名称',
   `type` varchar(32) NOT NULL DEFAULT 'CONNECT' COMMENT '洞察数据类型',
-  `config` DEFAULT NULL COMMENT '洞察数据配置信息',
+  `config` json DEFAULT NULL COMMENT '洞察数据配置信息',
   `status` tinyint(1) unsigned NOT NULL DEFAULT 1 COMMENT '逻辑删除，1: online, 2: delete',
-  `creator` bigint(20) unsigned NOT NULL COMMENT '创建人ID';
+  `creator` bigint(20) unsigned NOT NULL COMMENT '创建人ID',
   `creator_name` varchar(100) DEFAULT NULL COMMENT '创建人',
   `modifier` bigint(20) unsigned NOT NULL COMMENT '修改人ID',
   `modifier_name` varchar(100) DEFAULT NULL COMMENT '修改人',
   `process_status` varchar(32) NOT NULL DEFAULT 'RUNNING' COMMENT '数据处理状态',
   `process_instance_id` varchar(100) DEFAULT NULL COMMENT '异步数据处理ID',
-  `project_id` varchar(32) NOT NULL COMMENT '洞察数据所属项目ID'
+  `project_id` varchar(32) NOT NULL COMMENT '洞察数据所属项目ID',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_insight_id` (`insight_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=100000 DEFAULT CHARSET=utf8 COMMENT='洞察数据实例表';
