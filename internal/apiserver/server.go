@@ -2,6 +2,8 @@ package apiserver
 
 import (
 	"github.com/RaulZuo/deep/internal/apiserver/config"
+	"github.com/RaulZuo/deep/internal/apiserver/store"
+	"github.com/RaulZuo/deep/internal/apiserver/store/mysql"
 	genericoptions "github.com/RaulZuo/deep/internal/pkg/options"
 	genericapiserver "github.com/RaulZuo/deep/internal/pkg/server"
 )
@@ -91,8 +93,8 @@ func (c *ExtraConfig) complete() *completedExtraConfig {
 }
 
 func (c *completedExtraConfig) New() (interface {}, error) {
-	//storeIns, _ := mysql.GetMySQLFactoryOr(c.mysqlOptions)
-	//store.SetClient(storeIns)
+	storeIns, _ := mysql.GetMySQLFactoryOr(c.mysqlOptions)
+	store.SetClient(storeIns)
 	return nil, nil
 }
 
