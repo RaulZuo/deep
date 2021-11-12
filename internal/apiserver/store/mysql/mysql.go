@@ -18,6 +18,14 @@ type datastore struct {
 	// db *gorm.DB
 }
 
+func (ds *datastore) InsightDatas() store.InsightDataStore {
+	return newInsightDatas(ds)
+}
+
+func (ds *datastore) InsightFields() store.InsightFieldStore {
+	return newInsightFields(ds)
+}
+
 func (ds *datastore) Close() error {
 	db, err := ds.db.DB()
 	if err != nil {
