@@ -255,6 +255,8 @@ github.com/marmotedu/component-base v1.0.0 h1:Whd4lW3XlfDhLvF46drvLb+r8rBXGKep5L
 github.com/marmotedu/component-base v1.0.0/go.mod h1:uqOvcyTL4uNB3qxiVJXbYDbnVD4DB89/vWwQZfJgxkM=
 github.com/marmotedu/errors v0.0.1 h1:G0UzjyIk7mi6P+VjofWWOGvhA8D35zSqpbI3wBppR5Y=
 github.com/marmotedu/errors v0.0.1/go.mod h1:xNqbJJRD50/RGSjbfqF01CTLegWK+gtRgeJ6ExVzQQ8=
+github.com/marmotedu/errors v1.0.2 h1:qx9GtOljmAL+wLuemahe3WSWdXyEpJvLBlpXK8y2rdI=
+github.com/marmotedu/errors v1.0.2/go.mod h1:xNqbJJRD50/RGSjbfqF01CTLegWK+gtRgeJ6ExVzQQ8=
 github.com/marmotedu/log v0.0.1 h1:3jSFCRM3LW46vAd8t/fu5+S4wPXwvesdhj+iXU3OKVQ=
 github.com/marmotedu/log v0.0.1/go.mod h1:EsU1dxbgXmzan4NXzYhnYZ7H/soLrBZrTXlfN6svSNM=
 github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
@@ -486,6 +488,7 @@ golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a/go.mod h1:RxMgew5VJxzue5/jJ
 golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20201020160332-67f06af15bc9/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync v0.0.0-20201207232520-09787c993a3a/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
+golang.org/x/sync v0.0.0-20210220032951-036812b2e83c h1:5KslGYwFpkhGh+Q16bwMP3cOontH8FOep7tGV86Y7SQ=
 golang.org/x/sync v0.0.0-20210220032951-036812b2e83c/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sys v0.0.0-20180823144017-11551d06cbcc/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20180830151530-49385e6e1522/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
