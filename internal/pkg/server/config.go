@@ -44,7 +44,7 @@ func (c *Config) Complete() CompletedConfig {
 func (c CompletedConfig) New() (*GenericAPIServer, error) {
 	s := &GenericAPIServer{
 		//SecureServingInfo:   c.SecureServing,
-		//InsecureServingInfo: c.InsecureServing,
+		InsecureServingInfo: c.InsecureServing,
 		mode:                c.Mode,
 		healthz:             c.Healthz,
 		//enableMetrics:       c.EnableMetrics,
