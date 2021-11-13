@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/RaulZuo/deep/internal/pkg/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/marmotedu/component-base/pkg/core"
 	"golang.org/x/sync/errgroup"
@@ -92,9 +93,14 @@ func (s *GenericAPIServer) InstallMiddlewares() {
 	for _, m := range s.middlewares {
 		mw, ok := middleware.Middlewares[m]
 		if !ok {
-
+			//log.Warnf("can not find middleware: %s", m)
+			continue
 		}
+		//log.Infof("install middleware: %s", m)
+		s.Use(mw)
 	}
+
+	s.Use(middleware.Context())
 }
 
 // Run spawns the http server. It only returns when the port cannot be listened on initially.
