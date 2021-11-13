@@ -83,6 +83,20 @@ func (s *GenericAPIServer) Setup() {
 	}
 }
 
+func (s *GenericAPIServer) InstallMiddlewares() {
+	// necessary middlewares
+	// TODO
+	//s.Use(middleware.RequestID())
+
+	// install custom middlewares
+	for _, m := range s.middlewares {
+		mw, ok := middleware.Middlewares[m]
+		if !ok {
+
+		}
+	}
+}
+
 // Run spawns the http server. It only returns when the port cannot be listened on initially.
 func (s *GenericAPIServer) Run() error {
 	s.insecureServer = &http.Server{
