@@ -16,6 +16,7 @@ type Options struct {
 func NewOptions() *Options {
 	o := Options{
 		GenericServerRunOptions: genericoptions.NewServerRunOptions(),
+		InsecureServing: 		 genericoptions.NewInsecureServingOptions(),
 		MySQLOptions:            genericoptions.NewMySQLOptions(),
 	}
 
